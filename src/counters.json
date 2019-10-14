@@ -1,0 +1,232 @@
+{
+    "session" : {
+        "counter_prefix" : "c1_session_",
+        "dimentions" : {
+            "agent" : {
+                "name"          : "ЦентральныйСервер1С",
+                "description"   : "Центральный сервер 1С"
+            },
+            "cluster" : {
+                "name"          : "Кластер1С",
+                "description"   : "Кластер 1С"
+            },
+            "infobase" : {
+                "name"          : "ИнформационнаяБаза",
+                "name_rac"      : "infobase",
+                "description"   : "Информационная база"
+            },
+            "user_name" : {
+                "name"        : "Пользователь",
+                "name_rac"    : "user-name"
+            },
+            "session_id" : {
+                "name"        : "НомерСеанса",
+                "name_rac"    : "session-id",
+                "description" : "Номер сеанса"
+            },
+            "app_id" : {
+                "name"        : "ТипПриложения",
+                "name_rac"    : "app-id",
+                "description" : "Тип приложения"
+            },
+            "host" : {
+                "name"        : "Компьютер",
+                "name_rac"    : "host"
+            },
+            "hibernate" : {
+                "name"        : "Спящий",
+                "name_rac"    : "hibernate",
+                "description" : "Спящий сеанс"
+            },
+            "current_service_name":{
+                "name"        : "ИмяИсполняемогоСервиса",
+                "name_rac"    : "current-service-name",
+                "description" : "Имя исполняемого сервиса"
+            },
+            "db_proc_info":{
+                "name"        : "СоединениеССУБД",
+                "name_rac"    : "db-proc-info",
+                "description" : "Соединение с СУБД"
+            }
+        },
+        "counters" : {
+            "count" : {
+                "use"         : true,
+                "name"        : "КоличествоСеансов",
+                "description" : "Количество сеансов",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host"]
+            },
+            "started_at":{
+                "use"         : true,
+                "name"        : "ВремяНачала",
+                "name_rac"    : "started-at",
+                "type"        : "Дата",
+                "description" : "Время начала сеанса",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "last_active_at":{
+                "use"         : true,
+                "name"        : "ПоследняяАктивность",
+                "name_rac"    : "last-active-at",
+                "type"        : "Дата",
+                "description" : "Время последней активности",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "blocked_by_dbms":{
+                "use"         : true,
+                "name"        : "ЗаблокированоСУБД",
+                "name_rac"    : "blocked-by-dbms",
+                "description" : "Заблокировано СУБД",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "blocked_by_ls":{
+                "use"         : true,
+                "name"        : "ЗаблокированоУпр",
+                "name_rac"    : "blocked-by-ls",
+                "description" : "Заблокировано 1С",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "bytes_all":{
+                "use"         : true,
+                "name"        : "ДанныхВсего",
+                "name_rac"    : "bytes-all",
+                "description" : "Объем данных (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "bytes_last_5min":{
+                "use"         : true,
+                "name"        : "Данных5мин",
+                "name_rac"    : "bytes-last-5min",
+                "description" : "Объем данных (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "calls_all":{
+                "use"         : true,
+                "name"        : "КоличествоВызововВсего",
+                "name_rac"    : "calls-all",
+                "description" : "Количество вызовов (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "calls_last_5min":{
+                "use"         : true,
+                "name"        : "КоличествоВызовов5мин",
+                "name_rac"    : "calls-last-5min",
+                "description" : "Количество вызовов (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "dbms_bytes_all":{
+                "use"         : true,
+                "name"        : "ДанныхСУБДВсего",
+                "name_rac"    : "dbms-bytes-all",
+                "description" : "Данных СУБД (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "dbms_bytes_last_5min":{
+                "use"         : true,
+                "name"        : "ДанныхСУБД5мин",
+                "name_rac"    : "dbms-bytes-last-5min",
+                "description" : "Данных СУБД (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "db_proc_took":{
+                "use"         : true,
+                "name"        : "ЗахваченоСУБД",
+                "name_rac"    : "db-proc-took",
+                "description" : "Захвачено СУБД",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "db_proc_took_at":{
+                "use"         : true,
+                "name"        : "ВремяЗахватаСУБД",
+                "name_rac"    : "db-proc-took-at",
+                "description" : "Время захвата СУБД",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_current_dbms":{
+                "use"         : true,
+                "name"        : "ВремяВызоваСУБДТекущее",
+                "name_rac"    : "duration-current-dbms",
+                "type"        : "Дата",
+                "description" : "Время вызова СУБД (текущее)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_last_5min_dbms":{
+                "use"         : true,
+                "name"        : "ВремяВызововСУБД5мин",
+                "name_rac"    : "duration-last-5min-dbms",
+                "description" : "Время вызовов СУБД (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_all_dbms":{
+                "use"         : true,
+                "name"        : "ВремяВызововСУБДВсего",
+                "name_rac"    : "duration-all-dbms",
+                "description" : "Время вызовов СУБД (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_current":{
+                "use"         : true,
+                "name"        : "ВремяВызоваТекущее",
+                "name_rac"    : "duration-current",
+                "description" : "Время вызова (текущее)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_last_5min":{
+                "use"         : true,
+                "name"        : "ВремяВызовов5мин",
+                "name_rac"    : "duration-last-5min",
+                "description" : "Время вызовов (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_all":{
+                "use"         : true,
+                "name"        : "ВремяВызововВсего",
+                "name_rac"    : "duration-all",
+                "description" : "Время вызовов (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_current_service":{
+                "use"         : true,
+                "name"        : "ВремяВызоваСервисовТекущее",
+                "name_rac"    : "duration-current-service",
+                "description" : "Время вызова сервисов (текущее)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_last_5min_service":{
+                "use"         : true,
+                "name"        : "ВремяВызоваСервисов5мин",
+                "name_rac"    : "duration-last-5min-service",
+                "description" : "Время вызова сервисов (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "duration_all_service":{
+                "use"         : true,
+                "name"        : "ВремяВызоваСервисовВсего",
+                "name_rac"    : "duration-all-service",
+                "description" : "Время вызова сервисов (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "cpu_time_current":{
+                "use"         : true,
+                "name"        : "ВремяПроцессораТекущее",
+                "name_rac"    : "cpu-time-current",
+                "description" : "Процессорное время (текущее)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "cpu_time_5min_last":{
+                "use"         : true,
+                "name"        : "ВремяПроцессора5мин",
+                "name_rac"    : "cpu-time-5min-last",
+                "description" : "Процессорное время (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            },
+            "cpu_time_total":{
+                "use"         : true,
+                "name"        : "ВремяПроцессораВсего",
+                "name_rac"    : "cpu-time-total",
+                "description" : "Процессорное время (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"]
+            }
+        }
+    }
+}

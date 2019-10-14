@@ -1,0 +1,22 @@
+{
+    "default" : {
+        "name"       : "Локальный",
+        "ras"        : "localhost:1545",
+        "rac"        : "8.3",
+        "admin_name" : "",
+        "admin_pwd"  : "",
+        "cluster" : {
+            "default" : {
+                "cluster"    : "",
+                "admin_name" : "",
+                "admin_pwd"  : "",
+                "infobase" : {
+                    "SSL31_Demo" : {
+                        "admin_name" : "Администратор",
+                        "admin_pwd"  : ""
+                    }
+                }
+            }
+        }
+    }
+}

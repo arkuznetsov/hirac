@@ -32,13 +32,13 @@
 	ПараметрыМаршрута.Вставить("controller", "clusters");
 	ПараметрыМаршрута.Вставить("action", "get");
 
-	КоллекцияМаршрутов.Добавить("clusters_params", "clusters/{cluster}/{parameter?}", ПараметрыМаршрута);
+	КоллекцияМаршрутов.Добавить("clusters_params", "clusters/{host}/{port}/{parameter?}", ПараметрыМаршрута);
 
 	ПараметрыМаршрута = Новый Соответствие();
 	ПараметрыМаршрута.Вставить("controller", "servers");
 	ПараметрыМаршрута.Вставить("action", "get");
 
-	КоллекцияМаршрутов.Добавить("servers_params", "servers/{agent-host}/{agent-port}/{parameter?}", ПараметрыМаршрута);
+	КоллекцияМаршрутов.Добавить("servers_params", "servers/{host}/{port}/{parameter?}", ПараметрыМаршрута);
 
 	ПараметрыМаршрута = Новый Соответствие();
 	ПараметрыМаршрута.Вставить("controller", "infobases");

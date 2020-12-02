@@ -260,5 +260,32 @@
                 "agregate"    : "sum"
             }
         }
+    },
+    "infobase" : {
+        "counter_prefix" : "c1_infobase_",
+        "dimentions" : {
+            "agent" : {
+                "name"          : "ЦентральныйСервер1С",
+                "description"   : "Центральный сервер 1С"
+            },
+            "cluster" : {
+                "name"          : "Кластер1С",
+                "description"   : "Кластер 1С"
+            },
+            "infobase" : {
+                "name"          : "ИнформационнаяБаза",
+                "name_rac"      : "infobase",
+                "description"   : "Информационная база"
+            }
+        },
+        "counters" : {
+            "count" : {
+                "use"         : true,
+                "name"        : "КоличествоИБ",
+                "description" : "Количество ИБ",
+                "dimentions"  : ["agent", "cluster", "infobase"],
+                "agregate"    : "sum"
+            }
+        }
     }
 }

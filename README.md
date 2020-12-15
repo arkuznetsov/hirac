@@ -1,12 +1,42 @@
 # HTTP interface for RAC (HiRAC)
 
+## Кластеры
+
+### Получение списка кластеров
+
+```
+
+http://localhost:5005/cluster/list
+
+```
+
+## Серверы
+
+### Получение списка серверов
+
+```
+
+http://localhost:5005/server/list
+
+```
+
+## Информационные базы
+
+### Получение списка ИБ
+
+```
+
+http://localhost:5005/infobase/list
+
+```
+
 ## Сеансы
 
 ### Получение списка сеансов
 
 ```
 
-http://localhost:5005/sessions/list
+http://localhost:5005/session/list
 
 ```
 ## Счетчики
@@ -16,7 +46,7 @@ http://localhost:5005/sessions/list
 
 ```
 
-http://localhost:5005/counters/list
+http://localhost:5005/counter/list
 
 ```
 
@@ -26,11 +56,11 @@ http://localhost:5005/counters/list
 
 ```
 
-http://localhost:5005/counters/session
+http://localhost:5005/counter/session
 
 или
 
-http://localhost:5005/counters/session?dim=_all
+http://localhost:5005/counter/session?dim=_all
 
 ```
 
@@ -38,7 +68,7 @@ http://localhost:5005/counters/session?dim=_all
 
 ```
 
-http://localhost:5005/counters/session?format=prometheus
+http://localhost:5005/counter/session?format=prometheus
 
 ```
 
@@ -48,7 +78,7 @@ http://localhost:5005/counters/session?format=prometheus
 
 ```
 
-http://localhost:5005/counters/session?dim=_no
+http://localhost:5005/counter/session?dim=_no
 
 ```
 
@@ -56,7 +86,7 @@ http://localhost:5005/counters/session?dim=_no
 
 ```
 
-http://localhost:5005/counters/session?dim=_no&agregate=sum
+http://localhost:5005/counter/session?dim=_no&agregate=sum
 
 ```
 
@@ -66,7 +96,7 @@ http://localhost:5005/counters/session?dim=_no&agregate=sum
 
 ```
 
-http://localhost:5005/counters/session/count?dim=_all
+http://localhost:5005/counter/session/count?dim=_all
 
 ```
 
@@ -74,7 +104,7 @@ http://localhost:5005/counters/session/count?dim=_all
 
 ```
 
-http://localhost:5005/counters/session/count?filter_app_id=Designer
+http://localhost:5005/counter/session/count?filter_app_id=Designer
 
 ```
 
@@ -84,7 +114,7 @@ http://localhost:5005/counters/session/count?filter_app_id=Designer
 
 ```
 
-http://localhost:5005/counters/session/count?dim=host&dim=infobase&agregate=sum
+http://localhost:5005/counter/session/count?dim=host&dim=infobase&agregate=sum
 
 ```
 

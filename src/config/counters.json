@@ -8,11 +8,12 @@
             },
             "cluster" : {
                 "name"          : "Кластер1С",
+                "name_rac"      : "cluster_label",
                 "description"   : "Кластер 1С"
             },
             "infobase" : {
                 "name"          : "ИнформационнаяБаза",
-                "name_rac"      : "infobase",
+                "name_rac"      : "infobase_label",
                 "description"   : "Информационная база"
             },
             "user_name" : {

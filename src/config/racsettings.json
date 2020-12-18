@@ -1,19 +1,27 @@
 {
-    "default" : {
-        "name"       : "Локальный",
-        "ras"        : "localhost:1545",
+    "__default" : {
         "rac"        : "8.3",
         "admin_name" : "",
-        "admin_pwd"  : "",
+        "admin_pwd"  : ""
+    },
+    "localhost" : {
+        "ras"        : "localhost:1545",
         "cluster" : {
-            "default" : {
-                "cluster"    : "",
+            "__default" : {
+                "admin_name" : "",
+                "admin_pwd"  : ""
+            },
+            "ktb-h:1541" : {
                 "admin_name" : "",
                 "admin_pwd"  : "",
                 "infobase" : {
-                    "SSL31_Demo" : {
-                        "admin_name" : "Администратор",
+                    "__default" : {
+                        "admin_name" : "\"Администратор\"",
                         "admin_pwd"  : ""
+                    },
+                    "test" : {
+                        "admin_name" : "\"Администратор\"",
+                        "admin_pwd"  : "q2w3e4r5"
                     }
                 }
             }

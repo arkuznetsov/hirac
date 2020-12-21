@@ -289,5 +289,238 @@
                 "agregate"    : "sum"
             }
         }
+    },
+    "process" : {
+        "counter_prefix" : "c1_process_",
+        "dimentions" : {
+            "agent" : {
+                "name"          : "ЦентральныйСервер1С",
+                "description"   : "Центральный сервер 1С"
+            },
+            "cluster" : {
+                "name"          : "Кластер1С",
+                "name_rac"      : "cluster_label",
+                "description"   : "Кластер 1С"
+            },
+            "host" : {
+                "name"          : "Сервер",
+                "name_rac"      : "host",
+                "description"   : "Сервер"
+            },
+            "process" : {
+                "name"          : "РабочийПроцесс",
+                "name_rac"      : "process_label",
+                "description"   : "Рабочий процесс"
+            }
+        },
+        "counters" : {
+            "count" : {
+                "use"         : true,
+                "name"        : "КоличествоРабочихПроцессов",
+                "description" : "Количество рабочих процессов",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "sum"
+            },
+            "duration" : {
+                "use"         : true,
+                "name"        : "ВремяРаботы",
+                "description" : "Время работы процесса",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "sum"
+            },
+            "started_at" : {
+                "use"         : true,
+                "name"        : "ВремяНачалаРаботы",
+                "name_rac"    : "started-at",
+                "type"        : "Дата",
+                "description" : "Время начала работы процесса",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "min"
+            },
+            "available_perfomance" : {
+                "use"         : true,
+                "name"        : "ДоступнаяПроизводительность",
+                "name_rac"    : "available_perfomance",
+                "description" : "Доступная производительность",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "sum"
+            },
+            "connections" : {
+                "use"         : true,
+                "name"        : "КоличествоСоединений",
+                "name_rac"    : "connections",
+                "description" : "Количество соединений",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "sum"
+            },
+            "memory_size" : {
+                "use"         : true,
+                "name"        : "ОбъемПамяти",
+                "name_rac"    : "memory_size",
+                "description" : "Объем памяти процесса",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "sum"
+            },
+            "memory_excess_time" : {
+                "use"         : true,
+                "name"        : "ВремяПревышенияКритическогоОбъемаПамяти",
+                "name_rac"    : "memory_excess_time",
+                "description" : "Время превышения критического объема памяти процесса",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            },
+            "selection_size" : {
+                "use"         : true,
+                "name"        : "КоличествоВызовов",
+                "name_rac"    : "selection-size",
+                "description" : "Количество вызовов за которое посчитана статистика",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            },
+            "avg_back_call_time" : {
+                "use"         : true,
+                "name"        : "ВремяВызововКлиентаЗаОдноОбращение",
+                "name_rac"    : "avg-back-call-time",
+                "description" : "Время процесса на вызовы методов клиентского приложения за одно клиентское обращение",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            },
+            "avg_call_time" : {
+                "use"         : true,
+                "name"        : "ВремяОбслуживанияОдногоКлиентскогоОбращения",
+                "name_rac"    : "avg-call-time",
+                "description" : "Время обслуживания процессом одного клиентского обращения. Складывается из: AvgServerCallTime, AvgDBCallTime, AvgLockCallTime, AvgBackCallTime.",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            },
+            "avg_db_call_time" : {
+                "use"         : true,
+                "name"        : "ВремяОбращенияКСУБД",
+                "name_rac"    : "avg-db-call-time",
+                "description" : "Время процесса на обращения к СУБД за одно клиентского обращение",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            },
+            "avg_lock_call_time" : {
+                "use"         : true,
+                "name"        : "ВремяОбращенияКМенеджеруБлокировок",
+                "name_rac"    : "avg-lock-call-time",
+                "description" : "время обращения к менеджеру блокировок",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            },
+            "avg_server_call_time" : {
+                "use"         : true,
+                "name"        : "ВремяПроцессаНаОдноОбращение",
+                "name_rac"    : "avg-server-call-time",
+                "description" : "Время процесса на выполнение одного клиентского обращения",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            },
+            "avg_threads" : {
+                "use"         : true,
+                "name"        : "КоличествоКлиентскихПотоков",
+                "name_rac"    : "avg-threads",
+                "description" : "Количество клиентских потоков, исполняемых процессом",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "agregate"    : "avg"
+            }
+        }
+    },
+    "connection" : {
+        "counter_prefix" : "c1_connection_",
+        "dimentions" : {
+            "agent" : {
+                "name"          : "ЦентральныйСервер1С",
+                "description"   : "Центральный сервер 1С"
+            },
+            "cluster" : {
+                "name"          : "Кластер1С",
+                "name_rac"      : "cluster_label",
+                "description"   : "Кластер 1С"
+            },
+            "host" : {
+                "name"          : "Компьютер",
+                "name_rac"      : "host",
+                "description"   : "Компьютер"
+            },
+            "process" : {
+                "name"          : "РабочийПроцесс",
+                "name_rac"      : "process_label",
+                "description"   : "Рабочий процесс"
+            },
+            "process_host" : {
+                "name"          : "СерверРабочегоПроцесса",
+                "name_rac"      : "process_host",
+                "description"   : "Сервер рабочего процесса"
+            },
+            "infobase" : {
+                "name"          : "ИнформационнаяБаза",
+                "name_rac"      : "infobase_label",
+                "description"   : "Информационная база"
+            },
+            "application" : {
+                "name"          : "Приложение",
+                "name_rac"      : "application",
+                "description"   : "Приложение"
+            }
+        },
+        "counters" : {
+            "count" : {
+                "use"         : true,
+                "name"        : "КоличествоРабочихПроцессов",
+                "description" : "Количество рабочих процессов",
+                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "agregate"    : "sum"
+            },
+            "duration" : {
+                "use"         : true,
+                "name"        : "ВремяРаботы",
+                "description" : "Время работы процесса",
+                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "agregate"    : "sum"
+            },
+            "connected_at" : {
+                "use"         : true,
+                "name"        : "ВремяНачалаСоединения",
+                "name_rac"    : "connected-at",
+                "type"        : "Дата",
+                "description" : "Время начала работы процесса",
+                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "agregate"    : "min"
+            },
+            "duration_current_service":{
+                "use"         : true,
+                "name"        : "ВремяВызоваСервисовТекущее",
+                "name_rac"    : "duration-current-service",
+                "description" : "Время вызова сервисов (текущее)",
+                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "agregate"    : "sum"
+            },
+            "duration_last_5min_service":{
+                "use"         : true,
+                "name"        : "ВремяВызоваСервисов5мин",
+                "name_rac"    : "duration-last-5min-service",
+                "description" : "Время вызова сервисов (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "agregate"    : "sum"
+            },
+            "duration_all_service":{
+                "use"         : true,
+                "name"        : "ВремяВызоваСервисовВсего",
+                "name_rac"    : "duration-all-service",
+                "description" : "Время вызова сервисов (всего)",
+                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "agregate"    : "sum"
+            },
+            "blocked_by_ls":{
+                "use"         : true,
+                "name"        : "ЗаблокированоУпр",
+                "name_rac"    : "blocked-by-ls",
+                "description" : "Заблокировано 1С",
+                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "agregate"    : "sum"
+            }
+        }
     }
 }

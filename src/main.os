@@ -82,6 +82,18 @@
 
 	КоллекцияМаршрутов.Добавить("sessions_params", "session/{infobase}/{session}/{parameter?}", ПараметрыМаршрута);
 
+	ПараметрыМаршрута = Новый Соответствие();
+	ПараметрыМаршрута.Вставить("controller", "connection");
+	ПараметрыМаршрута.Вставить("action", "list");
+
+	КоллекцияМаршрутов.Добавить("connections", "connection/list", ПараметрыМаршрута);
+
+	ПараметрыМаршрута = Новый Соответствие();
+	ПараметрыМаршрута.Вставить("controller", "connection");
+	ПараметрыМаршрута.Вставить("action", "get");
+
+	КоллекцияМаршрутов.Добавить("connections_params", "connection/{infobase}/{connection}/{parameter?}", ПараметрыМаршрута);
+
 	КоллекцияМаршрутов.Добавить("default", "{controller=command}/{action=run}");
 
 КонецПроцедуры // ОпределениеМаршрутов()

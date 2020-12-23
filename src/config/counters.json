@@ -337,21 +337,21 @@
             },
             "host" : {
                 "name"          : "Сервер",
-                "name_rac"      : "agent-host",
+                "name_rac"      : "host",
                 "description"   : "Сервер"
             },
-            "server" : {
-                "name"          : "Сервер",
-                "name_rac"      : "server_label",
-                "description"   : "Сервер"
+            "process" : {
+                "name"          : "РабочийПроцесс",
+                "name_rac"      : "process_label",
+                "description"   : "Рабочий процесс"
             }
         },
         "counters" : {
             "count" : {
                 "use"         : true,
-                "name"        : "КоличествоСерверов",
-                "description" : "Количество serverov",
-                "dimentions"  : ["agent", "cluster", "host", "server"],
+                "name"        : "КоличествоРабочихПроцессов",
+                "description" : "Количество рабочих процессов",
+                "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "sum"
             },
             "duration" : {

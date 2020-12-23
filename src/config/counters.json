@@ -290,6 +290,39 @@
             }
         }
     },
+    "server" : {
+        "counter_prefix" : "c1_server_",
+        "dimentions" : {
+            "agent" : {
+                "name"          : "ЦентральныйСервер1С",
+                "description"   : "Центральный сервер 1С"
+            },
+            "cluster" : {
+                "name"          : "Кластер1С",
+                "name_rac"      : "cluster_label",
+                "description"   : "Кластер 1С"
+            },
+            "host" : {
+                "name"          : "Сервер",
+                "name_rac"      : "agent-host",
+                "description"   : "Сервер"
+            },
+            "server" : {
+                "name"          : "Сервер",
+                "name_rac"      : "server_label",
+                "description"   : "Сервер"
+            }
+        },
+        "counters" : {
+            "count" : {
+                "use"         : true,
+                "name"        : "КоличествоСерверов",
+                "description" : "Количество серверов",
+                "dimentions"  : ["agent", "cluster", "host", "server"],
+                "agregate"    : "sum"
+            }
+        }
+    },
     "process" : {
         "counter_prefix" : "c1_process_",
         "dimentions" : {
@@ -304,21 +337,21 @@
             },
             "host" : {
                 "name"          : "Сервер",
-                "name_rac"      : "host",
+                "name_rac"      : "agent-host",
                 "description"   : "Сервер"
             },
-            "process" : {
-                "name"          : "РабочийПроцесс",
-                "name_rac"      : "process_label",
-                "description"   : "Рабочий процесс"
+            "server" : {
+                "name"          : "Сервер",
+                "name_rac"      : "server_label",
+                "description"   : "Сервер"
             }
         },
         "counters" : {
             "count" : {
                 "use"         : true,
-                "name"        : "КоличествоРабочихПроцессов",
-                "description" : "Количество рабочих процессов",
-                "dimentions"  : ["agent", "cluster", "host", "process"],
+                "name"        : "КоличествоСерверов",
+                "description" : "Количество serverov",
+                "dimentions"  : ["agent", "cluster", "host", "server"],
                 "agregate"    : "sum"
             },
             "duration" : {

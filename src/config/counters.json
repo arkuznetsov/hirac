@@ -13,19 +13,19 @@
             },
             "infobase" : {
                 "name"          : "ИнформационнаяБаза",
-                "name-rac"      : "infobase-label",
+                "name_rac"      : "infobase-label",
                 "description"   : "Информационная база"
             },
-            "user_name" : {
+            "user-name" : {
                 "name"        : "Пользователь",
                 "name_rac"    : "user-name"
             },
-            "session_id" : {
+            "session-id" : {
                 "name"        : "НомерСеанса",
                 "name_rac"    : "session-id",
                 "description" : "Номер сеанса"
             },
-            "app_id" : {
+            "app-id" : {
                 "name"        : "ТипПриложения",
                 "name_rac"    : "app-id",
                 "description" : "Тип приложения"
@@ -39,12 +39,12 @@
                 "name_rac"    : "hibernate",
                 "description" : "Спящий сеанс"
             },
-            "current_service_name":{
+            "current-service-name":{
                 "name"        : "ИмяИсполняемогоСервиса",
                 "name_rac"    : "current-service-name",
                 "description" : "Имя исполняемого сервиса"
             },
-            "db_proc_info":{
+            "db-proc-info":{
                 "name"        : "СоединениеССУБД",
                 "name_rac"    : "db-proc-info",
                 "description" : "Соединение с СУБД"
@@ -55,209 +55,209 @@
                 "use"         : true,
                 "name"        : "КоличествоСеансов",
                 "description" : "Количество сеансов",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
             "duration":{
                 "use"         : true,
                 "name"        : "ДлительностьСеанса",
                 "description" : "Длительность сеанса",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "avg"
             },
-            "started_at":{
+            "started-at":{
                 "use"         : true,
                 "name"        : "ВремяНачала",
                 "name_rac"    : "started-at",
                 "type"        : "Дата",
                 "description" : "Время начала сеанса",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "min"
             },
-            "last_active_at":{
+            "last-active-at":{
                 "use"         : true,
                 "name"        : "ПоследняяАктивность",
                 "name_rac"    : "last-active-at",
                 "type"        : "Дата",
                 "description" : "Время последней активности",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "max"
             },
-            "blocked_by_dbms":{
+            "blocked-by-dbms":{
                 "use"         : true,
                 "name"        : "ЗаблокированоСУБД",
                 "name_rac"    : "blocked-by-dbms",
                 "description" : "Заблокировано СУБД",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "blocked_by_ls":{
+            "blocked-by-ls":{
                 "use"         : true,
                 "name"        : "ЗаблокированоУпр",
                 "name_rac"    : "blocked-by-ls",
                 "description" : "Заблокировано 1С",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "bytes_all":{
+            "bytes-all":{
                 "use"         : true,
                 "name"        : "ДанныхВсего",
                 "name_rac"    : "bytes-all",
                 "description" : "Объем данных (всего)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "bytes_last_5min":{
+            "bytes-last-5min":{
                 "use"         : true,
                 "name"        : "Данных5мин",
                 "name_rac"    : "bytes-last-5min",
                 "description" : "Объем данных (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "calls_all":{
+            "calls-all":{
                 "use"         : true,
                 "name"        : "КоличествоВызововВсего",
                 "name_rac"    : "calls-all",
                 "description" : "Количество вызовов (всего)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "calls_last_5min":{
+            "calls-last-5min":{
                 "use"         : true,
                 "name"        : "КоличествоВызовов5мин",
                 "name_rac"    : "calls-last-5min",
                 "description" : "Количество вызовов (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "dbms_bytes_all":{
+            "dbms-bytes-all":{
                 "use"         : true,
                 "name"        : "ДанныхСУБДВсего",
                 "name_rac"    : "dbms-bytes-all",
                 "description" : "Данных СУБД (всего)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "dbms_bytes_last_5min":{
+            "dbms-bytes-last-5min":{
                 "use"         : true,
                 "name"        : "ДанныхСУБД5мин",
                 "name_rac"    : "dbms-bytes-last-5min",
                 "description" : "Данных СУБД (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "db_proc_took":{
+            "db-proc-took":{
                 "use"         : true,
                 "name"        : "ЗахваченоСУБД",
                 "name_rac"    : "db-proc-took",
                 "description" : "Захвачено СУБД",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "db_proc_took_at":{
+            "db-proc-took-at":{
                 "use"         : true,
                 "name"        : "ВремяЗахватаСУБД",
                 "name_rac"    : "db-proc-took-at",
                 "description" : "Время захвата СУБД",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_current_dbms":{
+            "duration-current-dbms":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСУБДТекущее",
                 "name_rac"    : "duration-current-dbms",
                 "type"        : "Дата",
                 "description" : "Время вызова СУБД (текущее)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_last_5min_dbms":{
+            "duration-last-5min-dbms":{
                 "use"         : true,
                 "name"        : "ВремяВызововСУБД5мин",
                 "name_rac"    : "duration-last-5min-dbms",
                 "description" : "Время вызовов СУБД (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_all_dbms":{
+            "duration-all-dbms":{
                 "use"         : true,
                 "name"        : "ВремяВызововСУБДВсего",
                 "name_rac"    : "duration-all-dbms",
                 "description" : "Время вызовов СУБД (всего)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_current":{
+            "duration-current":{
                 "use"         : true,
                 "name"        : "ВремяВызоваТекущее",
                 "name_rac"    : "duration-current",
                 "description" : "Время вызова (текущее)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_last_5min":{
+            "duration-last-5min":{
                 "use"         : true,
                 "name"        : "ВремяВызовов5мин",
                 "name_rac"    : "duration-last-5min",
                 "description" : "Время вызовов (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_all":{
+            "duration-all":{
                 "use"         : true,
                 "name"        : "ВремяВызововВсего",
                 "name_rac"    : "duration-all",
                 "description" : "Время вызовов (всего)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_current_service":{
+            "duration-current-service":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСервисовТекущее",
                 "name_rac"    : "duration-current-service",
                 "description" : "Время вызова сервисов (текущее)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_last_5min_service":{
+            "duration-last-5min-service":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСервисов5мин",
                 "name_rac"    : "duration-last-5min-service",
                 "description" : "Время вызова сервисов (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "duration_all_service":{
+            "duration-all-service":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСервисовВсего",
                 "name_rac"    : "duration-all-service",
                 "description" : "Время вызова сервисов (всего)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "cpu_time_current":{
+            "cpu-time-current":{
                 "use"         : true,
                 "name"        : "ВремяПроцессораТекущее",
                 "name_rac"    : "cpu-time-current",
                 "description" : "Процессорное время (текущее)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "cpu_time_5min_last":{
+            "cpu-time-5min-last":{
                 "use"         : true,
                 "name"        : "ВремяПроцессора5мин",
                 "name_rac"    : "cpu-time-5min-last",
                 "description" : "Процессорное время (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
-            "cpu_time_total":{
+            "cpu-time-total":{
                 "use"         : true,
                 "name"        : "ВремяПроцессораВсего",
                 "name_rac"    : "cpu-time-total",
                 "description" : "Процессорное время (всего)",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             }
         }
@@ -361,7 +361,7 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "sum"
             },
-            "started_at" : {
+            "started-at" : {
                 "use"         : true,
                 "name"        : "ВремяНачалаРаботы",
                 "name_rac"    : "started-at",
@@ -370,10 +370,10 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "min"
             },
-            "available_perfomance" : {
+            "available-perfomance" : {
                 "use"         : true,
                 "name"        : "ДоступнаяПроизводительность",
-                "name_rac"    : "available_perfomance",
+                "name_rac"    : "available-perfomance",
                 "description" : "Доступная производительность",
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "sum"
@@ -386,23 +386,23 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "sum"
             },
-            "memory_size" : {
+            "memory-size" : {
                 "use"         : true,
                 "name"        : "ОбъемПамяти",
-                "name_rac"    : "memory_size",
+                "name_rac"    : "memory-size",
                 "description" : "Объем памяти процесса",
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "sum"
             },
-            "memory_excess_time" : {
+            "memory-excess-time" : {
                 "use"         : true,
                 "name"        : "ВремяПревышенияКритическогоОбъемаПамяти",
-                "name_rac"    : "memory_excess_time",
+                "name_rac"    : "memory-excess-time",
                 "description" : "Время превышения критического объема памяти процесса",
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "avg"
             },
-            "selection_size" : {
+            "selection-size" : {
                 "use"         : true,
                 "name"        : "КоличествоВызовов",
                 "name_rac"    : "selection-size",
@@ -410,7 +410,7 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "avg"
             },
-            "avg_back_call_time" : {
+            "avg-back-call-time" : {
                 "use"         : true,
                 "name"        : "ВремяВызововКлиентаЗаОдноОбращение",
                 "name_rac"    : "avg-back-call-time",
@@ -418,7 +418,7 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "avg"
             },
-            "avg_call_time" : {
+            "avg-call-time" : {
                 "use"         : true,
                 "name"        : "ВремяОбслуживанияОдногоКлиентскогоОбращения",
                 "name_rac"    : "avg-call-time",
@@ -426,7 +426,7 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "avg"
             },
-            "avg_db_call_time" : {
+            "avg-db-call-time" : {
                 "use"         : true,
                 "name"        : "ВремяОбращенияКСУБД",
                 "name_rac"    : "avg-db-call-time",
@@ -434,7 +434,7 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "avg"
             },
-            "avg_lock_call_time" : {
+            "avg-lock-call-time" : {
                 "use"         : true,
                 "name"        : "ВремяОбращенияКМенеджеруБлокировок",
                 "name_rac"    : "avg-lock-call-time",
@@ -442,7 +442,7 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "avg"
             },
-            "avg_server_call_time" : {
+            "avg-server-call-time" : {
                 "use"         : true,
                 "name"        : "ВремяПроцессаНаОдноОбращение",
                 "name_rac"    : "avg-server-call-time",
@@ -450,7 +450,7 @@
                 "dimentions"  : ["agent", "cluster", "host", "process"],
                 "agregate"    : "avg"
             },
-            "avg_threads" : {
+            "avg-threads" : {
                 "use"         : true,
                 "name"        : "КоличествоКлиентскихПотоков",
                 "name_rac"    : "avg-threads",
@@ -482,9 +482,9 @@
                 "name_rac"      : "process-label",
                 "description"   : "Рабочий процесс"
             },
-            "process_host" : {
+            "process-host" : {
                 "name"          : "СерверРабочегоПроцесса",
-                "name_rac"      : "process_host",
+                "name_rac"      : "process-host",
                 "description"   : "Сервер рабочего процесса"
             },
             "infobase" : {
@@ -503,55 +503,55 @@
                 "use"         : true,
                 "name"        : "КоличествоРабочихПроцессов",
                 "description" : "Количество рабочих процессов",
-                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
             "duration" : {
                 "use"         : true,
                 "name"        : "ВремяРаботы",
                 "description" : "Время работы процесса",
-                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
-            "connected_at" : {
+            "connected-at" : {
                 "use"         : true,
                 "name"        : "ВремяНачалаСоединения",
                 "name_rac"    : "connected-at",
                 "type"        : "Дата",
                 "description" : "Время начала работы процесса",
-                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
                 "agregate"    : "min"
             },
-            "duration_current_service":{
+            "duration-current-service":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСервисовТекущее",
                 "name_rac"    : "duration-current-service",
                 "description" : "Время вызова сервисов (текущее)",
-                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
-            "duration_last_5min_service":{
+            "duration-last-5min-service":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСервисов5мин",
                 "name_rac"    : "duration-last-5min-service",
                 "description" : "Время вызова сервисов (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
-            "duration_all_service":{
+            "duration-all-service":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСервисовВсего",
                 "name_rac"    : "duration-all-service",
                 "description" : "Время вызова сервисов (всего)",
-                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
-            "blocked_by_ls":{
+            "blocked-by-ls":{
                 "use"         : true,
                 "name"        : "ЗаблокированоУпр",
                 "name_rac"    : "blocked-by-ls",
                 "description" : "Заблокировано 1С",
-                "dimentions"  : ["agent", "cluster", "process_host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             }
         }

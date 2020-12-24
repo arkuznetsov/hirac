@@ -8,12 +8,12 @@
             },
             "cluster" : {
                 "name"          : "Кластер1С",
-                "name_rac"      : "cluster_label",
+                "name_rac"      : "cluster-label",
                 "description"   : "Кластер 1С"
             },
             "infobase" : {
                 "name"          : "ИнформационнаяБаза",
-                "name_rac"      : "infobase_label",
+                "name-rac"      : "infobase-label",
                 "description"   : "Информационная база"
             },
             "user_name" : {
@@ -271,7 +271,7 @@
             },
             "cluster" : {
                 "name"          : "Кластер1С",
-                "name_rac"      : "cluster_label",
+                "name_rac"      : "cluster-label",
                 "description"   : "Кластер 1С"
             },
             "infobase" : {
@@ -299,7 +299,7 @@
             },
             "cluster" : {
                 "name"          : "Кластер1С",
-                "name_rac"      : "cluster_label",
+                "name_rac"      : "cluster-label",
                 "description"   : "Кластер 1С"
             },
             "host" : {
@@ -309,7 +309,7 @@
             },
             "server" : {
                 "name"          : "Сервер",
-                "name_rac"      : "server_label",
+                "name_rac"      : "server-label",
                 "description"   : "Сервер"
             }
         },
@@ -332,7 +332,7 @@
             },
             "cluster" : {
                 "name"          : "Кластер1С",
-                "name_rac"      : "cluster_label",
+                "name_rac"      : "cluster-label",
                 "description"   : "Кластер 1С"
             },
             "host" : {
@@ -342,7 +342,7 @@
             },
             "process" : {
                 "name"          : "РабочийПроцесс",
-                "name_rac"      : "process_label",
+                "name_rac"      : "process-label",
                 "description"   : "Рабочий процесс"
             }
         },
@@ -469,7 +469,7 @@
             },
             "cluster" : {
                 "name"          : "Кластер1С",
-                "name_rac"      : "cluster_label",
+                "name_rac"      : "cluster-label",
                 "description"   : "Кластер 1С"
             },
             "host" : {
@@ -479,7 +479,7 @@
             },
             "process" : {
                 "name"          : "РабочийПроцесс",
-                "name_rac"      : "process_label",
+                "name_rac"      : "process-label",
                 "description"   : "Рабочий процесс"
             },
             "process_host" : {
@@ -489,7 +489,7 @@
             },
             "infobase" : {
                 "name"          : "ИнформационнаяБаза",
-                "name_rac"      : "infobase_label",
+                "name_rac"      : "infobase-label",
                 "description"   : "Информационная база"
             },
             "application" : {

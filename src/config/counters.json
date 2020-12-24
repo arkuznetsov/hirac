@@ -55,7 +55,7 @@
                 "use"         : true,
                 "name"        : "КоличествоСеансов",
                 "description" : "Количество сеансов",
-                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host"],
+                "dimentions"  : ["agent", "cluster", "infobase", "user_name", "app_id", "host", "session_id"],
                 "agregate"    : "sum"
             },
             "duration":{

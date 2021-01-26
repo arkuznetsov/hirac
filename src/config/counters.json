@@ -212,6 +212,78 @@
                 "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
                 "agregate"    : "sum"
             },
+            "memory-current":{
+                "use"         : true,
+                "name"        : "ПамятьТекущая",
+                "name_rac"    : "memory-current",
+                "description" : "Память (текущая)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "memory-last-5min":{
+                "use"         : true,
+                "name"        : "Память5мин",
+                "name_rac"    : "memory-last-5min",
+                "description" : "Память (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "memory-total":{
+                "use"         : true,
+                "name"        : "ПамятьВсего",
+                "name_rac"    : "memory-total",
+                "description" : "Память (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "read-current":{
+                "use"         : true,
+                "name"        : "ЧтениеТекущее",
+                "name_rac"    : "read-current",
+                "description" : "Чтение (текущее)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "read-last-5min":{
+                "use"         : true,
+                "name"        : "Чтение5мин",
+                "name_rac"    : "read-last-5min",
+                "description" : "Чтение (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "read-total":{
+                "use"         : true,
+                "name"        : "ЧтениеВсего",
+                "name_rac"    : "read-total",
+                "description" : "Чтение (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "write-current":{
+                "use"         : true,
+                "name"        : "ЗаписьТекущая",
+                "name_rac"    : "write-current",
+                "description" : "Запись (текущая)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "write-last-5min":{
+                "use"         : true,
+                "name"        : "Запись5мин",
+                "name_rac"    : "write-last-5min",
+                "description" : "Запись (5 мин.)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
+            "write-total":{
+                "use"         : true,
+                "name"        : "ЗаписьВсего",
+                "name_rac"    : "write-total",
+                "description" : "Запись (всего)",
+                "dimentions"  : ["agent", "cluster", "infobase", "user-name", "app-id", "host", "session-id"],
+                "agregate"    : "sum"
+            },
             "duration-current-service":{
                 "use"         : true,
                 "name"        : "ВремяВызоваСервисовТекущее",
@@ -482,7 +554,7 @@
                 "name_rac"      : "process-label",
                 "description"   : "Рабочий процесс"
             },
-            "process-host" : {
+            "server" : {
                 "name"          : "СерверРабочегоПроцесса",
                 "name_rac"      : "process-host",
                 "description"   : "Сервер рабочего процесса"
@@ -503,14 +575,14 @@
                 "use"         : true,
                 "name"        : "КоличествоРабочихПроцессов",
                 "description" : "Количество рабочих процессов",
-                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
             "duration" : {
                 "use"         : true,
                 "name"        : "ВремяРаботы",
                 "description" : "Время работы процесса",
-                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
             "connected-at" : {
@@ -519,7 +591,7 @@
                 "name_rac"    : "connected-at",
                 "type"        : "Дата",
                 "description" : "Время начала работы процесса",
-                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "min"
             },
             "duration-current-service":{
@@ -527,7 +599,7 @@
                 "name"        : "ВремяВызоваСервисовТекущее",
                 "name_rac"    : "duration-current-service",
                 "description" : "Время вызова сервисов (текущее)",
-                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
             "duration-last-5min-service":{
@@ -535,7 +607,7 @@
                 "name"        : "ВремяВызоваСервисов5мин",
                 "name_rac"    : "duration-last-5min-service",
                 "description" : "Время вызова сервисов (5 мин.)",
-                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
             "duration-all-service":{
@@ -543,7 +615,7 @@
                 "name"        : "ВремяВызоваСервисовВсего",
                 "name_rac"    : "duration-all-service",
                 "description" : "Время вызова сервисов (всего)",
-                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
             "blocked-by-ls":{
@@ -551,7 +623,7 @@
                 "name"        : "ЗаблокированоУпр",
                 "name_rac"    : "blocked-by-ls",
                 "description" : "Заблокировано 1С",
-                "dimentions"  : ["agent", "cluster", "process-host", "process", "infobase", "host", "application"],
+                "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             }
         }

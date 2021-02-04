@@ -573,15 +573,15 @@
         "counters" : {
             "count" : {
                 "use"         : true,
-                "name"        : "КоличествоРабочихПроцессов",
-                "description" : "Количество рабочих процессов",
+                "name"        : "КоличествоСоединений",
+                "description" : "Количество соединений",
                 "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },
             "duration" : {
                 "use"         : true,
-                "name"        : "ВремяРаботы",
-                "description" : "Время работы процесса",
+                "name"        : "ДлительносьСоединения",
+                "description" : "Длительность соединения",
                 "dimentions"  : ["agent", "cluster", "server", "process", "infobase", "host", "application"],
                 "agregate"    : "sum"
             },

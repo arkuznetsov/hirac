@@ -1,28 +1,31 @@
 {
-    "__default" : {
-        "rac"        : "8.3",
-        "admin_name" : "",
-        "admin_pwd"  : ""
+    "ras" : {
+        "__default" : {
+            "rac"        : "8.3",
+            "admin_name" : "",
+            "admin_pwd"  : ""
+        },
+        "server1" : {
+            "reserves" : "",
+            "ras"      : "server1:1545"
+        },
+        "server2" : {
+            "reserves" : "server1",
+            "ras"      : "server2:1545"
+        }
     },
-    "localhost" : {
-        "ras"        : "localhost:1545",
-        "cluster" : {
-            "__default" : {
-                "admin_name" : "",
-                "admin_pwd"  : ""
-            },
-            "ktb-h:1541" : {
-                "admin_name" : "",
-                "admin_pwd"  : "",
-                "infobase" : {
-                    "__default" : {
-                        "admin_name" : "\"Администратор\"",
-                        "admin_pwd"  : ""
-                    },
-                    "test" : {
-                        "admin_name" : "\"Администратор\"",
-                        "admin_pwd"  : "q2w3e4r5"
-                    }
+    "cluster" : {
+        "__default" : {
+            "admin_name" : "",
+            "admin_pwd"  : ""
+        },
+        "server1:1541" : {
+            "admin_name" : "admin",
+            "admin_pwd"  : "\"admin pwd\"",
+            "infobase" : {
+                "__default" : {
+                    "admin_name" : "Администратор",
+                    "admin_pwd"  : ""
                 }
             }
         }

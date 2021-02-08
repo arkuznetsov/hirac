@@ -29,5 +29,12 @@
                 }
             }
         }
-    }
+    },
+	"connectionPoolSize"       : 10,
+	"reconnectAtempts"         : 3,
+	"reconnectInterval"        : 1500,
+	"connectionWait"           : 10000,
+	"connectionLockInterval"   : 90000,
+	"logQueryDuration"         : false,
+	"QueryDurationLogFilename" : ""
 }

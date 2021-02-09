@@ -5,7 +5,7 @@
 [![Build Status](https://img.shields.io/github/workflow/status/ArKuznetsov/hirac/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%20%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0)](https://github.com/arkuznetsov/hirac/actions/)
 [![Quality Gate](https://open.checkbsl.org/api/badges/gate?key=hirac)](https://open.checkbsl.org/dashboard/index/hirac)
 [![Coverage](https://open.checkbsl.org/api/badges/measure?key=hirac&metric=coverage)](https://open.checkbsl.org/dashboard/index/hirac)
-[![Tech debt](https://open.checkbsl.org/api/badges/measure?key=hirac&metric=sqale_debt_ratio)](https://open.checkbsl.org/dashboard/index/hirac)## Кластеры
+[![Tech debt](https://open.checkbsl.org/api/badges/measure?key=hirac&metric=sqale_debt_ratio)](https://open.checkbsl.org/dashboard/index/hirac)
 
 REST API для получения информации о кластере сервера 1С и управления объектами кластера.
 
@@ -44,6 +44,24 @@ reg_os_web_as_service.cmd <путь к OneScript.Web>\OneScript.WebHost.exe <а�
   - **counter/list** - описания доступных счетчиков
   - **counter/<имя объекта>/list** - описания доступных счетчиков для <имя объекта>
   - **counter/<имя объекта>/<счетчик>** - значения счетчика <счетчик> для <имя объекта>
+
+### Используемые имена объектов (`<имя объекта>`)
+
+  - **cluster** - информация о кластерах
+  - **server** - информация о рабочих серверах
+  - **process** - информация о рабочих процессах
+  - **infobase** - информация об информационных базах
+  - **session** - информация о сеансах
+  - **connection** - информация о соединениях
+
+### Пути к объектам (`<путь к объекту>`)
+
+  - **cluster** - cluster/<адрес сервера>/<порт сервера>
+  - **server** - server/<адрес сервера>/<порт сервера>
+  - **process** - process/<адрес сервера>/<порт процесса>
+  - **infobase** - infobase/<имя информационной базы>
+  - **session** - session/<имя информационной базы>/<номер сеанса>
+  - **connection** - connection/<имя информационной базы>/<номер сеанса>
 
 ## Доступные поля запросов
 

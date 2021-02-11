@@ -249,6 +249,7 @@ http://localhost:5005/counter/session/count?dim=host&dim=infobase&aggregate=sum
   ONEC_USERNAME=<ПОЛЬЗОВАТЕЛЬ_USERS.1C.V8.RU>
   ONEC_PASSWORD=<ПАРОЛЬ_ОТ_USERS.1C.V8.RU>
   ONEC_VERSION=8.3.14.1993
+  OSCRIPT_VERSION=1.5.0
   ```
 
 2.Запустить скрипт сборки образов. При необходимости первым параметром можно указать тег собираемого образа. Тег по умолчанию - `oscript/hirac:latest`

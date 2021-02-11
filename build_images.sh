@@ -5,6 +5,10 @@ export $(grep -v '^#' .env | xargs)
 
 HIRAC_NAME_IMAGE="${1:-oscript/hirac:latest}"
 
+if [ ! -d "tools/docker/onec-full"]; then
+    git submodule update --init --recursive
+fi
+
 docker build -t demoncat/onec:full-"$ONEC_VERSION" \
     --build-arg ONEC_USERNAME="$ONEC_USERNAME" \
     --build-arg ONEC_PASSWORD="$ONEC_PASSWORD"  \

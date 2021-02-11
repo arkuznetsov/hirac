@@ -265,6 +265,6 @@ bash build_images.sh
 При необходимости использовать свои параметры необходимо переопределить конфигурационный файл, через подключеннный volume:
 
 ```
-docker run -d -p 5000:5000 -v $(pwd)/src/config/racsettings.json:/app/sconfig/racsettings.json demoncat/hirac:latest
+docker run -d -p 5000:5000 -v $(pwd)/src/config/racsettings.json:/app/config/racsettings.json demoncat/hirac:latest
 ```
 

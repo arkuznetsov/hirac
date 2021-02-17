@@ -362,6 +362,34 @@
             }
         }
     },
+    "cluster" : {
+        "counter_prefix" : "c1_cluster_",
+        "dimentions" : {
+            "agent" : {
+                "name"          : "ЦентральныйСервер1С",
+                "description"   : "Центральный сервер 1С"
+            },
+            "cluster" : {
+                "name"          : "Кластер1С",
+                "name_rac"      : "cluster-label",
+                "description"   : "Кластер 1С"
+            },
+            "host" : {
+                "name"          : "АдресСервера",
+                "name_rac"      : "host",
+                "description"   : "Адрес сервера"
+            }
+        },
+        "counters" : {
+            "count" : {
+                "use"         : true,
+                "name"        : "КоличествоКластеров",
+                "description" : "Количество кластеров",
+                "dimentions"  : ["agent", "cluster", "host"],
+                "aggregate"    : "sum"
+            }
+        }
+    },
     "server" : {
         "counter_prefix" : "c1_server_",
         "dimentions" : {
@@ -375,9 +403,9 @@
                 "description"   : "Кластер 1С"
             },
             "host" : {
-                "name"          : "Сервер",
+                "name"          : "АдресСервера",
                 "name_rac"      : "agent-host",
-                "description"   : "Сервер"
+                "description"   : "Адрес сервера"
             },
             "server" : {
                 "name"          : "Сервер",

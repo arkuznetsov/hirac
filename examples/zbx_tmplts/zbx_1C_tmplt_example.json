@@ -1,0 +1,159 @@
+{
+    "zabbix_export": {
+        "version": "5.2",
+        "date": "2021-02-08T09:05:56Z",
+        "groups": [
+            {
+                "name": "1C Servers"
+            }
+        ],
+        "templates": [
+            {
+                "template": "1C clusters",
+                "name": "1C clusters",
+                "templates": [
+                    {
+                        "name": "1C monitoring settings"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "1C Servers"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "name": "1C clusters",
+                        "key": "web.page.get[{$HIRAC_HOST},\"/cluster/list?field=cluster-label&field=cluster-host&field=cluster-port&field=agent&field=host&field=port&field=name\",{$HIRAC_PORT}]",
+                        "delay": "30m",
+                        "lifetime": "3600",
+                        "item_prototypes": [
+                            {
+                                "name": "1C cluster {#CLUSTER_LABEL} infobase count",
+                                "key": "web.page.regexp[{$HIRAC_HOST},\"/counter/infobase/count?filter_cluster-label={#CLUSTER_LABEL}&dim=_no&aggregate=sum&format=plain\",{$HIRAC_PORT},\"c1_infobase_count=([0-9]+)\",,0\\1]",
+                                "delay": "30m",
+                                "status": "DISABLED",
+                                "application_prototypes": [
+                                    {
+                                        "name": "1C cluster {#CLUSTER_LABEL}"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "1C cluster {#CLUSTER_LABEL} process count",
+                                "key": "web.page.regexp[{$HIRAC_HOST},\"/counter/process/count?filter_cluster-label={#CLUSTER_LABEL}&dim=_no&aggregate=sum&format=plain\",{$HIRAC_PORT},\"c1_process_count=([0-9]+)\",,0\\1]",
+                                "delay": "10m",
+                                "status": "DISABLED",
+                                "application_prototypes": [
+                                    {
+                                        "name": "1C cluster {#CLUSTER_LABEL}"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "1C cluster {#CLUSTER_LABEL} servers count",
+                                "key": "web.page.regexp[{$HIRAC_HOST},\"/counter/server/count?filter_cluster-label={#CLUSTER_LABEL}&dim=_no&aggregate=sum&format=plain\",{$HIRAC_PORT},\"c1_server_count=([0-9]+)\",,0\\1]",
+                                "delay": "30m",
+                                "status": "DISABLED",
+                                "application_prototypes": [
+                                    {
+                                        "name": "1C cluster {#CLUSTER_LABEL}"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "1C cluster {#CLUSTER_LABEL} session count",
+                                "key": "web.page.regexp[{$HIRAC_HOST},\"/counter/session/count?filter_cluster-label={#CLUSTER_LABEL}&dim=_no&aggregate=sum&format=plain\",{$HIRAC_PORT},\"c1_session_count=([0-9]+)\",,0\\1]",
+                                "delay": "5m",
+                                "application_prototypes": [
+                                    {
+                                        "name": "1C cluster {#CLUSTER_LABEL}"
+                                    }
+                                ]
+                            }
+                        ],
+                        "graph_prototypes": [
+                            {
+                                "name": "1C cluster {#CLUSTER_LABEL} session count",
+                                "type": "STACKED",
+                                "graph_items": [
+                                    {
+                                        "sortorder": "1",
+                                        "color": "2774A4",
+                                        "item": {
+                                            "host": "1C clusters",
+                                            "key": "web.page.regexp[{$HIRAC_HOST},\"/counter/session/count?filter_cluster-label={#CLUSTER_LABEL}&dim=_no&aggregate=sum&format=plain\",{$HIRAC_PORT},\"c1_session_count=([0-9]+)\",,0\\1]"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "lld_macro_paths": [
+                            {
+                                "lld_macro": "{#AGENT_ADDR}",
+                                "path": "$.agent"
+                            },
+                            {
+                                "lld_macro": "{#CLUSTER_HOST}",
+                                "path": "$.host"
+                            },
+                            {
+                                "lld_macro": "{#CLUSTER_LABEL}",
+                                "path": "$[\"cluster-label\"]"
+                            },
+                            {
+                                "lld_macro": "{#CLUSTER_NAME}",
+                                "path": "$.name"
+                            },
+                            {
+                                "lld_macro": "{#CLUSTER_PORT}",
+                                "path": "$.port"
+                            }
+                        ],
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "HTTP\\/1\\.1 200 OK(?sx).*(\\[.*\\])",
+                                    "\\1"
+                                ]
+                            },
+                            {
+                                "type": "DISCARD_UNCHANGED_HEARTBEAT",
+                                "parameters": [
+                                    "10"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "template": "1C monitoring settings",
+                "name": "1C monitoring settings",
+                "groups": [
+                    {
+                        "name": "1C Servers"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$HIRAC_EXTERNAL_ADDR}",
+                        "value": "s-app01:5005",
+                        "description": "\u0412\u043d\u0435\u0448\u043d\u0438\u0439 \u0430\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0438\u0441\u0430 HiRAC"
+                    },
+                    {
+                        "macro": "{$HIRAC_HOST}",
+                        "value": "localhost",
+                        "description": "\u0410\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0438\u0441\u0430 HiRAC"
+                    },
+                    {
+                        "macro": "{$HIRAC_PORT}",
+                        "value": "5005",
+                        "description": "\u041f\u043e\u0440\u0442 \u0441\u0435\u0440\u0432\u0438\u0441\u0430 HiRAC"
+                    }
+                ]
+            }
+        ]
+    }
+}

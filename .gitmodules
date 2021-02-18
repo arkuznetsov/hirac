@@ -1,0 +1,3 @@
+[submodule "tools/docker/onec-full"]
+	path = tools/docker/onec-full
+	url = https://github.com/TheDemonCat/onec-full.git

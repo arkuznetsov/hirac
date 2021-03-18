@@ -16,9 +16,8 @@ COPY src/ /app
 RUN cd /app \
     && opm install -l
 
-FROM evilbeaver/oscript-web:latest
+FROM evilbeaver/oscript-web:0.8.2
 COPY --from=onec-full /opt/1C/v8.3/x86_64 /opt/1C/v8.3/x86_64
 COPY --from=onec-full /app /app
 
-# Временное решение, до закрытия - https://github.com/EvilBeaver/OneScript.Web/pull/82
-ENTRYPOINT ["/var/osp.net/artifact/core/linux-x64/OneScript.WebHost"]
+ENTRYPOINT ["/var/osp.net/OneScript.WebHost"]

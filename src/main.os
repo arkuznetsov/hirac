@@ -94,6 +94,6 @@
 
 	КоллекцияМаршрутов.Добавить("connection_params", "connection/{infobase}/{connection}/{parameter?}", ПараметрыМаршрута);
 
-	КоллекцияМаршрутов.Добавить("default", "{controller=command}/{action=run}");
+	КоллекцияМаршрутов.Добавить("default", "{controller=command}/{action=state}");
 
 КонецПроцедуры // ОпределениеМаршрутов()

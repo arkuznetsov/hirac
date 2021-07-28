@@ -16,7 +16,7 @@ COPY src/ /app
 RUN cd /app \
     && opm install -l
 
-FROM evilbeaver/oscript-web:0.8.2
+FROM evilbeaver/oscript-web:0.9.0
 COPY --from=onec-full /opt/1C/v8.3/x86_64 /opt/1C/v8.3/x86_64
 COPY --from=onec-full /app /app
 

@@ -5,13 +5,9 @@
             "admin_name" : "",
             "admin_pwd"  : ""
         },
-        "server1" : {
+        "localhost" : {
             "reserves" : "",
-            "ras"      : "server1:1545"
-        },
-        "server2" : {
-            "reserves" : "server1",
-            "ras"      : "server2:1545"
+            "ras"      : "localhost:1545"
         }
     },
     "cluster" : {
@@ -20,8 +16,8 @@
             "admin_pwd"  : ""
         },
         "server1:1541" : {
-            "admin_name" : "admin",
-            "admin_pwd"  : "\"admin pwd\"",
+            "admin_name" : "",
+            "admin_pwd"  : "",
             "infobase" : {
                 "__default" : {
                     "admin_name" : "Администратор",
@@ -30,6 +26,7 @@
             }
         }
     },
+    "useCommands"              : "false",
 	"connectionPoolSize"       : 10,
 	"reconnectAtempts"         : 3,
 	"reconnectInterval"        : 1500,

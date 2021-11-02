@@ -21,7 +21,11 @@
             "infobase" : {
                 "__default" : {
                     "admin_name" : "Администратор",
-                    "admin_pwd"  : ""
+                    "admin_pwd"  : "",
+                    "dbms_type" : "MSSQLServer",
+                    "dbms_server" : "localhost",
+                    "dbms_user" : "monitor",
+                    "dbms_pwd" : ""
                 }
             }
         }

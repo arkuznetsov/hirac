@@ -1,3 +1,5 @@
 src/oscript_modules
 .vscode
 .env
+src/config/dbmap
+test

@@ -1,0 +1,49 @@
+{
+    "ras" : {
+        "__default" : {
+            "rac"        : "8.3",
+            "admin_name" : "",
+            "admin_pwd"  : ""
+        },
+        "server1" : {
+            "reserves" : "",
+            "ras"      : "server1:1545"
+        },
+        "server2" : {
+            "reserves" : "server1",
+            "ras"      : "server2:1545"
+        }
+    },
+    "cluster" : {
+        "__default" : {
+            "admin_name" : "",
+            "admin_pwd"  : ""
+        },
+        "server1:1541" : {
+            "admin_name" : "admin",
+            "admin_pwd"  : "\"admin pwd\"",
+            "infobase" : {
+                "__default" : {
+                    "admin_name" : "Администратор",
+                    "admin_pwd"  : "",
+                    "dbms_type" : "MSSQLServer",
+                    "dbms_server" : "localhost",
+                    "dbms_user" : "_1Cmonitor",
+                    "dbms_pwd" : "P@ssw0rd",
+                    "dbms_dbstruct_lifetime" : 3600000,
+                    "dbms_db_lifetime" : 600000,
+                    "dbms_tables_lifetime" : 600000
+                }
+            }
+        }
+    },
+    "useCommands"              : "false",
+    "dbStructCache"            : "",
+	"connectionPoolSize"       : 10,
+	"reconnectAtempts"         : 3,
+	"reconnectInterval"        : 1500,
+	"connectionWait"           : 10000,
+	"connectionLockInterval"   : 90000,
+	"logQueryDuration"         : false,
+	"QueryDurationLogFilename" : ""
+}

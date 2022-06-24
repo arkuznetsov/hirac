@@ -13,7 +13,8 @@
     "cluster" : {
         "__default" : {
             "admin_name" : "",
-            "admin_pwd"  : ""
+            "admin_pwd"  : "",
+            "selectedInfobasesOnly" : false
         },
         "localhost:1541" : {
             "admin_name" : "",
@@ -25,17 +26,22 @@
                     "dbms_type" : "MSSQLServer",
                     "dbms_server" : "localhost",
                     "dbms_user" : "monitor",
-                    "dbms_pwd" : ""
+                    "dbms_pwd" : "",
+                    "dbms_dbstruct_lifetime" : 3600000,
+                    "dbms_db_lifetime" : 600000,
+                    "dbms_tables_lifetime" : 600000
                 }
             }
         }
     },
     "useCommands"              : "false",
-	"connectionPoolSize"       : 10,
-	"reconnectAtempts"         : 3,
-	"reconnectInterval"        : 1500,
-	"connectionWait"           : 10000,
-	"connectionLockInterval"   : 90000,
-	"logQueryDuration"         : false,
-	"QueryDurationLogFilename" : ""
+    "dbStructCache"            : ".\\config\\dbmap",
+    "selectedClustersOnly"     : true,
+    "connectionPoolSize"       : 10,
+    "reconnectAtempts"         : 3,
+    "reconnectInterval"        : 1500,
+    "connectionWait"           : 10000,
+    "connectionLockInterval"   : 90000,
+    "logQueryDuration"         : false,
+    "QueryDurationLogFilename" : ""
 }

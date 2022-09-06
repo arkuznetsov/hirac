@@ -350,6 +350,11 @@
                 "name"          : "ИнформационнаяБаза",
                 "name_rac"      : "name",
                 "description"   : "Информационная база"
+            },
+            "db-server" : {
+                "name"          : "СерверСУБД",
+                "name_rac"      : "db-server",
+                "description"   : "Сервер СУБД"
             }
         },
         "counters" : {
@@ -358,6 +363,48 @@
                 "name"        : "КоличествоИБ",
                 "description" : "Количество ИБ",
                 "dimentions"  : ["agent", "cluster", "infobase"],
+                "aggregate"    : "sum"
+            },
+            "db-size-on-disk" : {
+                "use"         : true,
+                "name"        : "ЗанимаемоеМестоНаДиске",
+                "description" : "Занимаемое место на диске",
+                "dimentions"  : ["agent", "cluster", "infobase", "db-server"],
+                "aggregate"    : "sum"
+            },
+            "db-data-size" : {
+                "use"         : true,
+                "name"        : "РазмерДанных",
+                "description" : "Размер данных",
+                "dimentions"  : ["agent", "cluster", "infobase", "db-server"],
+                "aggregate"    : "sum"
+            },
+            "db-index-size" : {
+                "use"         : true,
+                "name"        : "РазмерИндексов",
+                "description" : "Размер индексов",
+                "dimentions"  : ["agent", "cluster", "infobase", "db-server"],
+                "aggregate"    : "sum"
+            },
+            "db-log-total" : {
+                "use"         : true,
+                "name"        : "РазмерЖурналаТранзакций",
+                "description" : "Размер журнала транзакций",
+                "dimentions"  : ["agent", "cluster", "infobase", "db-server"],
+                "aggregate"    : "sum"
+            },
+            "db-log-used" : {
+                "use"         : true,
+                "name"        : "ИспользованиеЖурналаТранзакций",
+                "description" : "Использование журнала транзакций",
+                "dimentions"  : ["agent", "cluster", "infobase", "db-server"],
+                "aggregate"    : "sum"
+            },
+            "db-table-count" : {
+                "use"         : true,
+                "name"        : "КоличествоТаблиц",
+                "description" : "Количество таблиц",
+                "dimentions"  : ["agent", "cluster", "infobase", "db-server"],
                 "aggregate"    : "sum"
             }
         }

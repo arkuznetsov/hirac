@@ -1,5 +1,3 @@
-# HTTP interface for RAC (HiRAC)
-
 [![GitHub release](https://img.shields.io/github/release/ArKuznetsov/hirac.svg?style=flat-square)](https://github.com/ArKuznetsov/hirac/releases)
 [![GitHub license](https://img.shields.io/github/license/ArKuznetsov/hirac.svg?style=flat-square)](https://github.com/ArKuznetsov/hirac/blob/develop/LICENSE)
 [![GitHub Releases](https://img.shields.io/github/downloads/ArKuznetsov/hirac/latest/total?style=flat-square)](https://github.com/ArKuznetsov/hirac/releases)
@@ -9,6 +7,10 @@
 [![Quality Gate](https://open.checkbsl.org/api/project_badges/measure?project=hirac&metric=alert_status)](https://open.checkbsl.org/dashboard/index/hirac)
 [![Coverage](https://open.checkbsl.org/api/project_badges/measure?project=hirac&metric=coverage)](https://open.checkbsl.org/dashboard/index/hirac)
 [![Tech debt](https://open.checkbsl.org/api/project_badges/measure?project=hirac&metric=sqale_index)](https://open.checkbsl.org/dashboard/index/hirac)
+
+<a href="https://checkbsl.org"><img alt="Checked by Silver Bulleters SonarQube BSL plugin" src="https://web-files.do.bit-erp.ru/sonar/b_t.png" align="right" style="width:400px"/></a>
+
+# HTTP interface for RAC (HiRAC)
 
 REST API для получения информации о кластере сервера 1С и управления объектами кластера.
 
